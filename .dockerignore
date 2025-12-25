@@ -1,0 +1,74 @@
+# .dockerignore
+# Ignore unnecessary files when building Docker image
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.pyc
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Git
+.git/
+.gitignore
+.gitattributes
+
+# Documentation
+*.md
+docs/
+
+# Tests
+tests/
+.pytest_cache/
+.coverage
+
+# CI/CD
+.github/
+.gitlab-ci.yml
+
+# Data (don't include in image, mount as volume)
+data/raw/
+data/processed/
+data/splits/
+
+# Large model checkpoints (use saved_model instead)
+models/checkpoints/*.h5
+
+# Logs
+logs/
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Notebooks
+notebooks/
+*.ipynb
+.ipynb_checkpoints/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Evaluation results
+evaluation_results/
+
+# Environment
+.env
+.env.local
+kaggle.json
